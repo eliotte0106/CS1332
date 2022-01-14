@@ -54,7 +54,9 @@ public class ArrayList<T> {
         } else if (data == null) {
             throw new IllegalArgumentException("Cannot add data if data is null.");
         } else {
+            // if (size >= backingArray.length)
             if (size + 1 > backingArray.length) {
+                //Arrays.copyOf(backingArray, backingArray.length * 2);
                 T[] copyArray = backingArray;
                 backingArray = (T[]) new Object[backingArray.length * 2];
                 for (int i = 0; i < copyArray.length; i++) {
