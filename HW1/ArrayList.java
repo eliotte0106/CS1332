@@ -151,6 +151,9 @@ public class ArrayList<T> {
      * @throws java.util.NoSuchElementException if the list is empty
      */
     public T removeFromFront() {
+        if (size == 0) {
+            throw new NoSuchElementException("list is empty");
+        }
         return removeAtIndex(0);
     }
 
@@ -163,6 +166,9 @@ public class ArrayList<T> {
      * @throws java.util.NoSuchElementException if the list is empty
      */
     public T removeFromBack() {
+        if (size == 0) {
+            throw new NoSuchElementException("list is empty");
+        }
         return removeAtIndex(size - 1);
     }
 
